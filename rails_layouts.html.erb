@@ -1,0 +1,40 @@
+<!-- app/views/products/show.html.erb -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Flatiron Store</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="navigation">
+      <ul>
+        <a href="/products">Products</a>
+        <a href="/cart">Cart</a>
+      </ul>
+    </div>
+    
+    <h1><%= @product.name %></h1>
+    
+    <p><strong>Category:</strong></p>
+    <%= @product.category %>
+    
+    <p>
+      <strong>Price:</strong>
+      <%= @product.price %>
+    </p>
+    
+    <div class="footer">
+      <p>This shop promises the lowest prices in widgets!</p>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
